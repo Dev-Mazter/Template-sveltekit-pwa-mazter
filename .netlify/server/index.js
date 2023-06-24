@@ -2467,7 +2467,7 @@ function set_paths(paths) {
   base = paths.base;
   assets = paths.assets || base;
 }
-const app_template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + '/favicon.ico" />\n		<meta name="viewport" content="width=device-width, initial-scale=1.0" />\n    <meta name="theme-color" content="rgb(251, 255, 49)">\n		<script src="https://kit.fontawesome.com/7a413080f8.js" crossorigin="anonymous"><\/script>\n		' + head + '\n	</head>\n	<body data-sveltekit-preload-data="hover">\n		<div style="display: contents">' + body + '</div>\n		<script src="' + assets2 + '/btn-anim.js"><\/script>\n	</body>\n</html>\n';
+const app_template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\r\n<html lang="en">\r\n	<head>\r\n		<meta charset="utf-8" />\r\n		<link rel="icon" href="' + assets2 + '/favicon.ico" />\r\n		<meta name="viewport" content="width=device-width, initial-scale=1.0" />\r\n    <meta name="theme-color" content="rgb(251, 255, 49)">\r\n		<script src="https://kit.fontawesome.com/7a413080f8.js" crossorigin="anonymous"><\/script>\r\n		' + head + '\r\n	</head>\r\n	<body data-sveltekit-preload-data="hover">\r\n		<div>' + body + '</div>\r\n		<!-- <script src="' + assets2 + '/btn-anim.js"><\/script> -->\r\n	</body>\r\n</html>\r\n';
 const error_template = ({ status, message }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
@@ -2547,7 +2547,7 @@ class Server {
       app_template,
       app_template_contains_nonce: false,
       error_template,
-      version: "1673276388061"
+      version: "1687585208308"
     };
   }
   /**
