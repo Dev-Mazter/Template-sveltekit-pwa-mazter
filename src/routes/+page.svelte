@@ -23,4 +23,4 @@
     Hello world!
   </h1>
 
-<section class="container__animation" in:fly={{ duration: 2000 }} out:fade>Hello world!</section>
+<section class="container__animation" in:fly={{ duration: 2000 }} out:fade>Hello world!!</section>
