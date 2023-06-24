@@ -73,18 +73,19 @@
 			if (installButton) {
 				installButton.style.display = 'block';
 				installButton.addEventListener('click', () => {
-					installPrompt.prompt();
-
-					installPrompt.userChoice.then((choiceResult: any) => {
-						if (choiceResult.outcome === 'accepted') {
-							console.log('La PWA fue instalada por el usuario.');
-						} else {
-							console.log('El usuario canceló la instalación de la PWA.');
-						}
-						installButton.style.display = 'none';
-					});
-					// @ts-ignore
-					installPrompt = null;
+					try {
+						installPrompt.prompt();
+						installPrompt.userChoice.then((choiceResult: any) => {
+							if (choiceResult.outcome === 'accepted') {
+								console.log('La PWA fue instalada por el usuario.');
+							} else {
+								console.log('El usuario canceló la instalación de la PWA.');
+							}
+							installButton.style.display = 'none';
+						});
+						// @ts-ignore
+						installPrompt = null;
+					} catch (error) {}
 				});
 			}
 		});
