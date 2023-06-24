@@ -1,5 +1,4 @@
 <script lang="ts">
-	// @ts-nocheck__
 	import '../styles/global.css';
 	import { onMount } from 'svelte';
 	// @ts-ignore
@@ -23,7 +22,7 @@
 							// console.log('Checking for sw update');
 							r.update();
 						}, 20000);
-				},
+				}
 				// onRegisterError(error: any) {
 				// 	// console.log('SW registration error', error);
 				// }
@@ -43,6 +42,7 @@
 	// Enbale Install PWA
 	function showInstallPrompt() {
 		// Verificar si la aplicación ya se ejecuta en modo "standalone" como PWA independiente
+
 		if (window.matchMedia('(display-mode: standalone)').matches) {
 			return;
 		}
@@ -63,10 +63,12 @@
 			return;
 		}
 
+		console.log('cheking----------');
+
 		window.addEventListener('beforeinstallprompt', (event) => {
 			showBtnPWA = true;
 			event.preventDefault();
-			let installPrompt =  event;
+			let installPrompt = event;
 			const installButton = document.getElementById('install-pwa-button');
 			if (installButton) {
 				installButton.style.display = 'block';
@@ -102,7 +104,8 @@
 
 <!-- Enbale Install PWA -->
 {#if showBtnPWA}
-	<button id="install-pwa-button" style="display: none;">install-pwa-button</button>
+	Install PWA
 {/if}
+<button id="install-pwa-button" style="display: block;">install-pwa-button</button>
 
 <slot />

@@ -6,10 +6,12 @@
 		// @ts-ignore
 		(await import('../webkit/btn-anim.js')).default;
 		// Check Online or offline page
-		// if (navigator.onLine === true) {
-		// 	alert('online')
-		// 	document.body.setAttribute('data-sveltekit-preload-data', 'off');
-		// }
+		if (navigator.onLine === true) {
+			// alert('online')
+			// document.body.setAttribute('data-sveltekit-preload-data', 'off');
+		}else{
+			alert('offline...')
+		}
 	});
 </script>
 
