@@ -46,7 +46,7 @@ const config = {
 			devOptions: {
 				enabled: true,
 				type: 'module',
-				navigateFallback: '/'
+				navigateFallback: null
 			},
 			kit: {}
 		})
