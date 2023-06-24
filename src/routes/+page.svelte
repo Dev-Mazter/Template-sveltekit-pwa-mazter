@@ -20,4 +20,4 @@
 	<meta name="description" content="template-sveltekit-pwa" />
 </svelte:head>
 
-<section in:fly={{ duration: 2000 }} out:fade>Hello world!</section>
+<section class="container__animation" in:fly={{ duration: 2000 }} out:fade>Hello world!</section>
