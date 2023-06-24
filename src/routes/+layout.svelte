@@ -63,10 +63,8 @@
 			return;
 		}
 
-		console.log('cheking----------');
-
+		showBtnPWA = true;
 		window.addEventListener('beforeinstallprompt', (event) => {
-			showBtnPWA = true;
 			event.preventDefault();
 			let installPrompt = event;
 			const installButton = document.getElementById('install-pwa-button');
