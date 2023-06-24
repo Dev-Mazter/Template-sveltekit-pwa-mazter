@@ -3,6 +3,8 @@
 	import { onMount } from 'svelte';
 	// @ts-ignore
 	import { pwaInfo } from 'virtual:pwa-info';
+	// @ts-ignore
+	import { BeforeInstallPromptEvent } from 'workbox-window';
 
 	/**
 	 * @type {typeof import("$lib/config/ReloadPrompt.svelte").default}
@@ -66,14 +68,13 @@
 		showBtnPWA = true;
 		window.addEventListener('beforeinstallprompt', (event) => {
 			event.preventDefault();
-			let installPrompt = event;
+			let installPrompt = event as BeforeInstallPromptEvent;
 			const installButton = document.getElementById('install-pwa-button');
 			if (installButton) {
 				installButton.style.display = 'block';
 				installButton.addEventListener('click', () => {
-					// @ts-ignore
 					installPrompt.prompt();
-					// @ts-ignore
+
 					installPrompt.userChoice.then((choiceResult: any) => {
 						if (choiceResult.outcome === 'accepted') {
 							console.log('La PWA fue instalada por el usuario.');

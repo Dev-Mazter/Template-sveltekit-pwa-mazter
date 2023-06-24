@@ -3499,6 +3499,16 @@
   "resolved" "https://registry.npmjs.org/workbox-core/-/workbox-core-6.5.4.tgz"
   "version" "6.5.4"
 
+"workbox-core@6.6.0":
+  "integrity" "sha512-GDtFRF7Yg3DD859PMbPAYPeJyg5gJYXuBQAC+wyrWuuXgpfoOrIQIvFRZnQ7+czTIQjIr1DhLEGFzZanAT/3bQ=="
+  "resolved" "https://registry.npmjs.org/workbox-core/-/workbox-core-6.6.0.tgz"
+  "version" "6.6.0"
+
+"workbox-core@7.0.0":
+  "integrity" "sha512-81JkAAZtfVP8darBpfRTovHg8DGAVrKFgHpOArZbdFd78VqHr5Iw65f2guwjE2NlCFbPFDoez3D3/6ZvhI/rwQ=="
+  "resolved" "https://registry.npmjs.org/workbox-core/-/workbox-core-7.0.0.tgz"
+  "version" "7.0.0"
+
 "workbox-expiration@6.5.4":
   "integrity" "sha512-jUP5qPOpH1nXtjGGh1fRBa1wJL2QlIb5mGpct3NzepjGG2uFFBn4iiEBiI9GUmfAFR2ApuRhDydjcRmYXddiEQ=="
   "resolved" "https://registry.npmjs.org/workbox-expiration/-/workbox-expiration-6.5.4.tgz"
@@ -3579,7 +3589,23 @@
   "resolved" "https://registry.npmjs.org/workbox-sw/-/workbox-sw-6.5.4.tgz"
   "version" "6.5.4"
 
-"workbox-window@^6.5.4", "workbox-window@6.5.4":
+"workbox-window@^6.5.4":
+  "integrity" "sha512-L4N9+vka17d16geaJXXRjENLFldvkWy7JyGxElRD0JvBxvFEd8LOhr+uXCcar/NzAmIBRv9EZ+M+Qr4mOoBITw=="
+  "resolved" "https://registry.npmjs.org/workbox-window/-/workbox-window-6.6.0.tgz"
+  "version" "6.6.0"
+  dependencies:
+    "@types/trusted-types" "^2.0.2"
+    "workbox-core" "6.6.0"
+
+"workbox-window@^7.0.0":
+  "integrity" "sha512-j7P/bsAWE/a7sxqTzXo3P2ALb1reTfZdvVp6OJ/uLr/C2kZAMvjeWGm8V4htQhor7DOvYg0sSbFN2+flT5U0qA=="
+  "resolved" "https://registry.npmjs.org/workbox-window/-/workbox-window-7.0.0.tgz"
+  "version" "7.0.0"
+  dependencies:
+    "@types/trusted-types" "^2.0.2"
+    "workbox-core" "7.0.0"
+
+"workbox-window@6.5.4":
   "integrity" "sha512-HnLZJDwYBE+hpG25AQBO8RUWBJRaCsI9ksQJEp3aCOFCaG5kqaToAYXFRAHxzRluM2cQbGzdQF5rjKPWPA1fug=="
   "resolved" "https://registry.npmjs.org/workbox-window/-/workbox-window-6.5.4.tgz"
   "version" "6.5.4"

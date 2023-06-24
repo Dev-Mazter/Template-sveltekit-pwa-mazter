@@ -37,6 +37,7 @@
 		"@vite-pwa/sveltekit": "^0.1.2",
 		"eva-icons": "^1.1.3",
 		"svelte-preprocess": "^5.0.0",
-		"vite-plugin-pwa": "^0.14.1"
+		"vite-plugin-pwa": "^0.14.1",
+		"workbox-window": "^7.0.0"
 	}
 }
