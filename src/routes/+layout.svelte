@@ -36,9 +36,9 @@
 	});
 
 	// Enbale Install PWA
-	// onMount(() => {
-	// 	showInstallPrompt();
-	// });
+	onMount(() => {
+		showInstallPrompt();
+	});
 
 	// Enbale Install PWA
 	function showInstallPrompt() {
@@ -101,8 +101,8 @@
 {/if}
 
 <!-- Enbale Install PWA -->
-<!-- {#if showBtnPWA}
+{#if showBtnPWA}
 	<button id="install-pwa-button" style="display: none;">install-pwa-button</button>
-{/if} -->
+{/if}
 
 <slot />
