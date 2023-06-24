@@ -4,6 +4,7 @@ import {
 	precacheAndRoute
 } from 'workbox-precaching';
 import { NetworkFirst } from 'workbox-strategies';
+import { CacheFirst  } from 'workbox-strategies';
 import { NavigationRoute, registerRoute } from 'workbox-routing';
 
 declare let self: ServiceWorkerGlobalScope;
@@ -20,6 +21,13 @@ cleanupOutdatedCaches();
 
 const allowlist: RegExp[] | undefined = import.meta.env.DEV ? [/^\/$/] : undefined;
 
+registerRoute(
+    ({ url }) => true,
+    new CacheFirst()
+  );
+
+
+// Works!
 registerRoute(({ url }) => url.pathname === '/', new NetworkFirst());
 
 // Initial
