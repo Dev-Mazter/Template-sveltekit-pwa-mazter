@@ -4,7 +4,7 @@
 	// @ts-ignore
 	import { pwaInfo } from 'virtual:pwa-info';
 	// @ts-ignore
-	import { BeforeInstallPromptEvent } from 'workbox-window';
+	// import { BeforeInstallPromptEvent } from 'workbox-window';
 
 	/**
 	 * @type {typeof import("$lib/config/ReloadPrompt.svelte").default}
@@ -55,12 +55,8 @@
 			return;
 		}
 
-		const userAgent = window.navigator.userAgent.toLowerCase();
-		const isChrome = /chrome/.test(userAgent);
-		const isEdge = /edg/.test(userAgent);
-
 		// Si no es compatible con la instalación de PWA, no realizar ninguna acción adicional
-		if (!isChrome && !isEdge) {
+		if (valideBrowser()) {
 			showBtnPWA = false;
 			return;
 		}
@@ -68,13 +64,15 @@
 		showBtnPWA = true;
 		window.addEventListener('beforeinstallprompt', (event) => {
 			event.preventDefault();
-			let installPrompt = event as BeforeInstallPromptEvent;
+			let installPrompt = event;
 			const installButton = document.getElementById('install-pwa-button');
 			if (installButton) {
 				installButton.style.display = 'block';
 				installButton.addEventListener('click', () => {
 					try {
+						// @ts-ignore
 						installPrompt.prompt();
+						// @ts-ignore
 						installPrompt.userChoice.then((choiceResult: any) => {
 							if (choiceResult.outcome === 'accepted') {
 								console.log('La PWA fue instalada por el usuario.');
@@ -89,6 +87,16 @@
 				});
 			}
 		});
+
+		function valideBrowser() {
+			const userAgent = window.navigator.userAgent.toLowerCase();
+			const isChrome = /chrome/.test(userAgent);
+			const isEdge = /edg/.test(userAgent);
+			if (!isChrome && !isEdge) {
+				showBtnPWA = false;
+				return true;
+			}
+		}
 	}
 
 	$: webManifest = pwaInfo ? pwaInfo.webManifest.linkTag : '';
@@ -104,8 +112,13 @@
 
 <!-- Enbale Install PWA -->
 {#if showBtnPWA}
-	Install PWA
+	<button
+		id="install-pwa-button"
+		style="display: block;"
+		
+	>
+		Install
+	</button>
 {/if}
-<button id="install-pwa-button" style="display: block;">install-pwa-button</button>
 
 <slot />

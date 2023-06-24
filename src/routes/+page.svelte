@@ -19,5 +19,8 @@
 	<title>Title</title>
 	<meta name="description" content="template-sveltekit-pwa" />
 </svelte:head>
+<h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
 
 <section class="container__animation" in:fly={{ duration: 2000 }} out:fade>Hello world!</section>
