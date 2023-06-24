@@ -16,7 +16,7 @@ cleanupOutdatedCaches();
 const allowlist: RegExp[] | undefined = import.meta.env.DEV ? [/^\/$/] : undefined;
 
 registerRoute(
-  new NavigationRoute(createHandlerBoundToURL('/'), {
+  new NavigationRoute(createHandlerBoundToURL('/xx'), {
     allowlist,
   })
 );
