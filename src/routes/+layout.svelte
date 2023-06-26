@@ -11,6 +11,7 @@
 	 */
 	let ReloadPrompt: any;
 	let showBtnPWA = false;
+	let msgError = '';
 
 	onMount(async () => {
 		if (pwaInfo) {
@@ -44,19 +45,21 @@
 	// Enbale Install PWA
 	function showInstallPrompt() {
 		// Verificar si la aplicación ya se ejecuta en modo "standalone" como PWA independiente
-
 		if (window.matchMedia('(display-mode: standalone)').matches) {
+			msgError = 'Ya es una PWA';
 			return;
 		}
 
 		// El navegador no es compatible con la instalación de PWA.
 		if (!window.navigator || !window.navigator.userAgent) {
+			msgError = 'El navegador no es compatible';
 			showBtnPWA = false;
 			return;
 		}
 
 		// Si no es compatible con la instalación de PWA, no realizar ninguna acción adicional
 		if (valideBrowser()) {
+			msgError = 'El navegador no es chome, edge o safary';
 			showBtnPWA = false;
 			return;
 		}
@@ -92,7 +95,9 @@
 			const userAgent = window.navigator.userAgent.toLowerCase();
 			const isChrome = /chrome/.test(userAgent);
 			const isEdge = /edg/.test(userAgent);
-			if (!isChrome && !isEdge) {
+			const isSafari = /safari/.test(userAgent);
+
+			if (!isChrome && !isEdge && !isSafari) {
 				showBtnPWA = false;
 				return true;
 			}
@@ -112,13 +117,13 @@
 
 <!-- Enbale Install PWA -->
 {#if showBtnPWA}
-	<button
-		id="install-pwa-button"
-		style="display: block;"
-		
-	>
-		Install
-	</button>
+	<button id="install-pwa-button" style="display: block;"> Install </button>
 {/if}
 
 <slot />
+
+<br />
+<br />
+<br />
+<br />
+{msgError}
