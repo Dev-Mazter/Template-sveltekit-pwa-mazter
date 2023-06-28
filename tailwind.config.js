@@ -2,7 +2,11 @@
 export default {
   content: ["./src/**/*.{html,js,svelte}"],
   theme: {
-    extend: {},
+    extend: {
+      height: {
+        'fit-contend': 'fit-content',
+      }
+    },
   },
   plugins: [],
 }
