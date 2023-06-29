@@ -1117,6 +1117,14 @@
     "estree-walker" "^2.0.2"
     "picomatch" "^2.3.1"
 
+"@skeletonlabs/skeleton@^1.8.0":
+  "integrity" "sha512-dO4ukU34MGUY1yA1Gln+YUFEEew25AHm6GMpbzCOX8p8b9NmVBWiSuF3me9jnbrV15TGJxmUGzdiRN/70b4KIg=="
+  "resolved" "https://registry.npmjs.org/@skeletonlabs/skeleton/-/skeleton-1.8.0.tgz"
+  "version" "1.8.0"
+  dependencies:
+    "esm-env" "1.0.0"
+    "svelte" "3.58.0"
+
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   "integrity" "sha512-lR8q/9W7hZpMWweNiAKU7NQerBnzQQLvi8qnTDU/fxItPhtZVMbPV3lbCwjhIlNBe9Bbr5V+KHshvWmVSG9cxQ=="
   "resolved" "https://registry.npmjs.org/@surma/rollup-plugin-off-main-thread/-/rollup-plugin-off-main-thread-2.2.3.tgz"
@@ -1840,7 +1848,7 @@
     "strip-json-comments" "^3.1.0"
     "text-table" "^0.2.0"
 
-"esm-env@^1.0.0":
+"esm-env@^1.0.0", "esm-env@1.0.0":
   "integrity" "sha512-Cf6VksWPsTuW01vU9Mk/3vRue91Zevka5SjyNf3nEpokFRuqt/KjUQoGAwq9qMmhpLTHmXzSIrFRw8zxWzmFBA=="
   "resolved" "https://registry.npmjs.org/esm-env/-/esm-env-1.0.0.tgz"
   "version" "1.0.0"
@@ -3322,10 +3330,10 @@
     "sorcery" "^0.10.0"
     "strip-indent" "^3.0.0"
 
-"svelte@^3.2.0", "svelte@^3.23.0", "svelte@^3.24.0", "svelte@^3.54.0", "svelte@>=3.19.0":
-  "integrity" "sha512-uGu2FVMlOuey4JoKHKrpZFkoYyj0VLjJdz47zX5+gVK5odxHM40RVhar9/iK2YFRVxvfg9FkhfVlR0sjeIrOiA=="
-  "resolved" "https://registry.npmjs.org/svelte/-/svelte-3.55.0.tgz"
-  "version" "3.55.0"
+"svelte@^3.2.0", "svelte@^3.23.0", "svelte@^3.24.0", "svelte@^3.54.0", "svelte@>=3.19.0", "svelte@3.58.0":
+  "integrity" "sha512-brIBNNB76mXFmU/Kerm4wFnkskBbluBDCjx/8TcpYRb298Yh2dztS2kQ6bhtjMcvUhd5ynClfwpz5h2gnzdQ1A=="
+  "resolved" "https://registry.npmjs.org/svelte/-/svelte-3.58.0.tgz"
+  "version" "3.58.0"
 
 "tailwindcss@^3.3.2":
   "integrity" "sha512-9jPkMiIBXvPc2KywkraqsUfbfj+dHDb+JPWtSJa9MLFdrPyazI7q6WX2sUrm7R9eVR7qqv3Pas7EvQFzxKnI6w=="
