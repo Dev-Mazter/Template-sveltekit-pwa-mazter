@@ -7,13 +7,13 @@ skeleton
 
 
 GIT HELP:
-feat:      new features
-fix:       fixing bugs
-chore:     Misecllanwous changes (no fix, no updates)
-refactor:  refactor code
-docs:      documentations update
-style:     code formatting
-test:      testing updates
-perf:      performance inprovements
-register:  register new record
-build:     building in code
+feat:       new features
+fix:        fixing bugs
+chore:      Misecllanwous changes (no fix, no updates)
+refactor:   refactor code
+docs:       documentations update
+style:      code formatting
+test:       testing updates
+perf:       performance inprovements
+register:   register new record
+build:      building in code
