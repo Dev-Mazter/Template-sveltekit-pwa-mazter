@@ -17,3 +17,4 @@ test:       testing updates
 perf:       performance inprovements
 register:   register new record
 build:      building in code
+clean:      delete & clear code
