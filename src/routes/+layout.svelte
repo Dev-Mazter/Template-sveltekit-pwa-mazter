@@ -1,7 +1,8 @@
 <script lang="ts">
 	import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
-	import '../styles/global.css';
+	import '../styles/global.css'
+	import "$lib/icons/tabler-icons.css"
 	import { onMount } from 'svelte';
 	// @ts-ignore
 	import { pwaInfo } from 'virtual:pwa-info';

@@ -22,4 +22,7 @@
 .ti-123:before {
   content: "\f554";
 }
+.ti-brand-google-home:before {
+  content: "\f601";
+}
 
