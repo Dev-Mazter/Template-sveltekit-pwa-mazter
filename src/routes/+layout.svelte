@@ -1,11 +1,10 @@
 <script lang="ts">
 	import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
-	import '../styles/global.css'
+	import '../styles/global.css';
 	import { onMount } from 'svelte';
 	// @ts-ignore
 	import { pwaInfo } from 'virtual:pwa-info';
-
 
 	/**
 	 * @type {typeof import("$lib/config/ReloadPrompt.svelte").default}
@@ -13,6 +12,18 @@
 	let ReloadPrompt: any;
 	let showBtnPWA = false;
 	let msgError = '';
+
+	onMount(async () => {
+		// @ts-ignore
+		(await import('../webkit/btn-anim.js')).default;
+		// Check Online or offline page
+		if (navigator.onLine === true) {
+			// alert('online')
+			// document.body.setAttribute('data-sveltekit-preload-data', 'off');
+		} else {
+			alert('offline...');
+		}
+	});
 
 	onMount(async () => {
 		if (pwaInfo) {
@@ -120,11 +131,5 @@
 {#if showBtnPWA}
 	<button id="install-pwa-button" style="display: block;"> Install </button>
 {/if}
-
 <slot />
-
-<br />
-<br />
-<br />
-<br />
 {msgError}
