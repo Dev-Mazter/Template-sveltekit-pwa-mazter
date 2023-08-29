@@ -1,0 +1,9 @@
+{
+    "files.exclude": {
+        "**/node_modules": true
+    },
+    "workbench.colorCustomizations": {
+        // Svelte
+        "statusBar.border": "#ff58209f",
+    }
+}
