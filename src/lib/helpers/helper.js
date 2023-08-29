@@ -36,3 +36,9 @@ export function showPhone(phone) {
     }
     return numbers.join("");
 }
+
+export function formatCurrency(numero) {
+    let partes = numero.toString().split('.');
+    partes[0] = partes[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return '$ ' + (partes[1] ? partes.join('.') : partes[0]);
+}
